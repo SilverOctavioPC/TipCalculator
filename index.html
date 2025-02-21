@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Propina</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="theme-switch">
+        <button id="themeToggle" class="theme-toggle-btn">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="input-section">
+                <!-- Campo de monto -->
+                <div class="input-group">
+                    <label for="billAmount">Monto:</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                        <input type="number" id="billAmount" placeholder="0">
+                    </div>
+                </div>
+                
+                <!-- Campo de número de personas -->
+                <div class="input-group">
+                    <label for="peopleCount">Numero de Personas:</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="number" id="peopleCount" placeholder="0" min="1">
+                    </div>
+                </div>
+
+                <!-- Sección de propina -->
+                <div class="tip-section">
+                    <label>Selecciona el %:</label>
+                    <div class="tip-options">
+                        <button class="tip-btn" data-tip="5">5%</button>
+                        <button class="tip-btn" data-tip="10">10%</button>
+                        <button class="tip-btn" data-tip="15">15%</button>
+                        <button class="tip-btn" data-tip="25">25%</button>
+                        <button class="tip-btn" data-tip="50">50%</button>
+                        <input type="number" id="customTip" class="tip-btn custom-tip-input" placeholder="Custom">
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-section">
+                <div class="result-row">
+                    <div class="result-label">
+                        <p>Total de propina:</p>
+                    </div>
+                    <div class="result-value">
+                        <p id="totalTip">$0.00</p>
+                    </div>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-label">
+                        <p>Propina por persona:</p>
+                    </div>
+                    <div class="result-value">
+                        <p id="tipPerPerson">$0.00</p>
+                    </div>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-label">
+                        <p>Total por persona:</p>
+                    </div>
+                    <div class="result-value">
+                        <p id="totalPerPerson">$0.00</p>
+                    </div>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-label">
+                        <p>Total a pagar:</p>
+                    </div>
+                    <div class="result-value">
+                        <p id="totalBill">$0.00</p>
+                    </div>
+                </div>
+
+                <button id="shareWhatsappBtn" class="share-btn">
+                    <i class="fab fa-whatsapp"></i> Compartir por WhatsApp
+                </button>
+
+                <button id="resetBtn">RESET</button>
+            </div>
+        </div>
+        <div class="author-credit">
+            Realizado por Silver Pérez
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
