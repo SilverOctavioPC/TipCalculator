@@ -332,3 +332,18 @@ input[type="number"] {
 [data-theme="dark"] .author-credit {
     color: var(--result-text);
 }
+
+/* titulo */
+.calculator-title {
+    text-align: center;
+    color: var(--input-text);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+/* título en modo oscuro */
+[data-theme="dark"] .calculator-title {
+    color: var(--result-text);
+}
